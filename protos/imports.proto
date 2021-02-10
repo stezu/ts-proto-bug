@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package imports;
+
+import "protos/auth/types.proto";
+import "protos/user/types.proto";
+
+message LoggedInUser {
+  auth.User user = 1;
+}
+
+message SomeOtherUser {
+  user.User user = 1;
+}
